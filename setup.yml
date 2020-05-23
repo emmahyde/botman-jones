@@ -5,18 +5,18 @@ Parameters:
     Type: String
     Description: 'The S3 bucket for CodePipeline artifacts.'
 
-    Resources:
+Resources:
   CodePipelineS3Bucket:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
-  Properties:
-    BucketName: !Ref CodePipelineBucket
-    PublicAccessBlockConfiguration:
-      BlockPublicAcls: true
-      BlockPublicPolicy: true
-      IgnorePublicAcls: true
-      RestrictPublicBuckets: true
-    BucketEncryption:
-      ServerSideEncryptionConfiguration:
-        - ServerSideEncryptionByDefault:
-            SSEAlgorithm: AES256
+    Properties:
+      BucketName: !Ref CodePipelineBucket
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: 
+              SSEAlgorithm: AES256
