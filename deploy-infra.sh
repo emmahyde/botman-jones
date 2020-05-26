@@ -1,15 +1,15 @@
 #!/bin/bash
-STACK_NAME=awsbootstrap 
+STACK_NAME=lucretia-bott
 REGION=us-east-1 
-CLI_PROFILE=awsbootstrap 
+CLI_PROFILE=admin-emmajhyde
 EC2_INSTANCE_TYPE=t2.micro 
-AWS_ACCOUNT_ID=`aws sts get-caller-identity --profile awsbootstrap --query "Account" --output text`
+AWS_ACCOUNT_ID=`aws sts get-caller-identity --profile admin-emmajhyde --query "Account" --output text`
 CODEPIPELINE_BUCKET="$STACK_NAME-$REGION-codepipeline-$AWS_ACCOUNT_ID"
 # Generate a personal access token with repo and admin:repo_hook
 # permissions from https://github.com/settings/tokens
-GH_ACCESS_TOKEN=$(cat ~/.github/aws-bootstrap-access-token)
-GH_OWNER=$(cat ~/.github/aws-bootstrap-owner)
-GH_REPO=$(cat ~/.github/aws-bootstrap-repo)
+GH_ACCESS_TOKEN=$(cat ~/.github/lucretia-bott-access-token)
+GH_OWNER=$(cat ~/.github/lucretia-bott-owner)
+GH_REPO=$(cat ~/.github/lucretia-bott-repo)
 GH_BRANCH=master
 
 # Deploys static resources
@@ -45,6 +45,6 @@ aws cloudformation deploy \
 # If the deploy succeeded, show the DNS name of the created instance
 if [ $? -eq 0 ]; then
   aws cloudformation list-exports \
-  --profile awsbootstrap \
+  --profile admin-ejhyde \
   --query "Exports[?Name=='InstanceEndpoint'].Value"
 fi

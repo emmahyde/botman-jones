@@ -12,6 +12,12 @@ const premiumRole = {
   color: 0x6aa84f,
   hoist: true
 }
+//
+// commandMap['trivia'] = {
+//   execute: (msg, args) => {
+//
+//   }
+// }
 
 commandMap['addpayment'] = {
   botOwnerOnly: true,

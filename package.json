@@ -1,21 +1,21 @@
 {
-  "name": "botman-jones",
+  "name": "lucretia-bott",
   "version": "1.0.0",
-  "description": "the bot that was inside me all along. ",
+  "description": "the bot that was inside me all along.",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/emmajhyde/botman-jones.git"
+    "url": "git+ssh://git@github.com/emmajhyde/lucretia-bott.git"
   },
   "author": "Emma Hyde",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/emmajhyde/botman-jones/issues"
+    "url": "https://github.com/emmajhyde/lucretia-bott/issues"
   },
-  "homepage": "https://github.com/emmajhyde/botman-jones#readme",
+  "homepage": "https://github.com/emmajhyde/lucretia-bott#readme",
   "main": "server.js",
   "scripts": {
-    "start": "node ./node_modules/pm2/bin/pm2 start ./server.js --name botman-jones --log ../logs/app.log",
-    "stop": "node ./node_modules/pm2/bin/pm2 stop botman-jones",
+    "start": "node ./node_modules/pm2/bin/pm2 start ./server.js --name lucretia-bott --log ../logs/app.log",
+    "stop": "node ./node_modules/pm2/bin/pm2 stop lucretia-bott",
     "build": "echo 'Building...'"
   },
   "dependencies": {
